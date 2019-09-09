@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>搜索结果</title>
+    <link rel="stylesheet" type="text/css" href="../../css/result.css">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+</head>
+<body>
+         <div class="top-bar" >
+            <nav class="navbar navbar-default navbar-fixed-top row" style="background-color: white">
+        <div class="col-md-8"></div>
+        <div class="col-md-4 col-xs-4">
+           <ul class="nav nav-pills ban ul2">
+                    <li role="presentation" style="margin-top: 10px;">欢迎回来，<span id="username"></span></li>
+                    <li role="presentation"><a href="home.html">主页</a> </li>
+                    <li role="presentation"><a href="http://localhost:8080/myself.jsp" target="_self">个人中心</a> </li>
+                    <li role="presentation"><a href="">帮助</a> </li>
+                    <li role="presentation"><a href="">联系我们</a> </li>
+           </ul>
+        </div>
+    <div class="search">
+        <form action="/index/search">
+            <input type="text" name="find" placeholder="请输入您所寻找的职位">
+            <input style="width: 80px;background-color: #1787FB;color: white" value="查找" id="searchs" type="submit">
+        </form>
+    </div>
+    </nav>
+    </div>
+    <div class="totalcontanier">
+        <div class="tap">
+            <div class="tt">
+                搜索结果
+            </div>
+        </div>
+
+        <div style="display:none" class="hides"></div>
+
+
+    </div>
+
+    <div class="gap">
+        
+    </div>
+    <!-- 尾部 -->
+     <div class="my-footer">
+        <div class="col-md-2 ss">
+            <ul>关于
+                <li>系统招聘</li>
+                <li>人才招聘</li>
+                <li>联系方式</li>
+                <li>网站地图</li>
+            </ul>
+        </div>
+        <div class="col-md-2 ss">
+            <ul>帮助
+                <li>加入系统</li>
+                <li>客户服务</li>
+                <li>法律声明</li>
+                <li>隐私政策</li>
+                <li>发票制度</li>
+                <li>用户协议</li>
+            </ul>
+        </div>
+        <div class="col-md-2">  
+        </div>
+        <div class="col-md-5">
+            <h4>更懂你的价值</h4>
+            <div class="row">
+                <div class="col-md-4">
+                <img src="../..//ff.jpg">
+                </div>
+            <div class="col-md-4"><img src="../../imgs/ff.jpg"></div>
+            <div class="col-md-4"><img src="../../imgs/ff.jpg"></div>
+            <span>未经开发人员同意，不得转载本网站之所有招聘信息及作品开发者权所有</span>
+            </div><hr>
+    </div>
+  </div>
+</body>
+<script>
+    function getCookie(cookieName) {
+        var strCookie = document.cookie;
+        var arrCookie = strCookie.split("; ");
+        for(var i = 0; i < arrCookie.length; i++){
+            var arr = arrCookie[i].split("=");
+            if(cookieName == arr[0]){
+                return arr[1];
+            }
+        }
+        return "";
+    }
+    var username = getCookie("studentName");
+    $("#username").text(username)
+</script>
+<script>
+    var searchUrl = window.location.href;
+    var searchData = searchUrl.split("=");
+    var values = decodeURI(searchData[1]);
+    $(document).ready(function() {
+        $.ajax({
+            url:"http://127.0.0.1:8080/index/serarch.do",
+            type:'get',
+            async:false,
+            dataType:'json',
+            data:{"name":values},
+            success:function (res) {
+                for (var i =0;i<res.data.list.length;i++){
+                    console.log(res.data.list[i])
+                    console.log(res.data.list[i].positionName)
+                    $(".hides").after("<div class='rr'><div class='single-result'><div class='row'></div><div class='row'><div class='col-md-4 dd'><p>"+res.data.list[i].positionName+"</p></div><div class='col-md-8'><p>"+res.data.list[i].enterpriseName+"</p></div></div><div class='row'><div class='col-md-8'><span style='color:red;font-size:20px;font-weight: bold; margin-left: 50px;'>"+res.data.list[i].positionSalary+"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>"+res.data.list[i].positionAddress+"</span>|<span>"+res.data.list[i].positionEdu+"</span>|<span>"+res.data.list[i].positionPublishState+"</span></div><div class='col-md-4'><span style='margin-left: 60px'>"+res.data.list[i].enterpriseNature+"</span>|<span>"+res.data.list[i].enterpriseScale+"</span></div></div><div class='row'><button class='btn btn-info local'><a href="+'http://localhost:8080/index/detail?id='+res.data.list[i].positionId+"> 查看详情</a></button></div></div></div>")
+                }
+            },
+            error:function(data){
+                console.log("false")
+                console.log(data)
+            }
+        });
+    })
+
+
+</script>
+</html>

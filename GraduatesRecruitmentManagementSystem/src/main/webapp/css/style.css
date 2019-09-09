@@ -1,0 +1,266 @@
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .header{
+      z-index: 100;
+      width: 100%;
+    height: 90px;
+    font-size: .75rem;
+    line-height: 1rem;
+    border-bottom: 15px solid #757575;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+}
+.logo{
+    width: 350px;
+    position: absolute;
+    left:35%;
+    top: 20px;
+}
+.header-title{
+    letter-spacing: 7px;
+}
+.level{
+    width: 120px;
+    position: absolute;
+    left:80%;
+    top: 40px;
+}
+.level i{
+    padding-right: 15px;
+}
+.level-text{
+    color: #000;
+    letter-spacing: 2px;
+}
+.lead{
+   
+    width: 100%;
+    height: 50px;
+    font-size: .75rem;
+    line-height: 1rem;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    right: 0;
+    background: #fff;
+}
+.breadcrumb{
+    position: absolute;
+    left:31%;
+    background-color: #fff;
+}
+.lead-text{
+    color: #000;
+    font-size: 16px;
+    letter-spacing: 5px;
+}
+.part{
+    width: 1010px;
+    height: 350px;
+    position: fixed;
+    top:180px;
+    left: 160px;
+    right: 0;
+    border-width: 1px;
+    border-color: #757575;
+    border-style: solid;
+}
+.form-group-1{
+    position: absolute;
+    left: 10%;
+    top: 60px;
+}
+.form-group-2{
+    position: absolute;
+    left: 39%;
+    top: 60px;
+}
+.form-group-3{
+    position: absolute;
+    left: 39%;
+    top: 240px;
+}
+
+.part h5{
+    position: absolute;
+    left: 10%;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.form-group-4{
+    position: absolute;
+    left: 10%;
+    top: 120px;}
+    .form-group-5{
+        position: absolute;
+        left: 39%;
+        top:120px;
+    }
+    .form-group-6{
+        position: absolute;
+        left: 70%;
+        top: 60px;
+    }
+    .form-group-7{
+        position: absolute;
+        left: 10%;
+        top: 180px;
+    }
+    .form-group-8{
+        position: absolute;
+        left: 39%;
+        top:180px;
+    }
+    .form-group-9{
+        position: absolute;
+        left: 10%;
+        top: 240px;
+    }
+    .form-group-10{
+        position: absolute;
+        left: 10%;
+        top: 60px;
+    }
+    .form-button{
+        position: absolute;
+        left: -75%;
+    top: 240px;
+    }
+    .container{
+        width: 100%;
+    height: 100px;
+    font-size: .75rem;
+    line-height: 1rem;
+    
+    position: fixed;
+    top: 140px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    }
+  
+    .form-group-20{
+        position: absolute;
+        left: 5%;
+        top: 50px;
+    }
+    .form-group-21{
+        position: absolute;
+        left: 35%;
+        top: 50px;
+    }
+    .form-group-22{
+        position: absolute;
+        left: 35%;
+        top: 150px;
+    }
+    .form-group-23{
+        position: absolute;
+        left: 5%;
+        top: 100px;
+    }
+    .form-group-24{
+        position: absolute;
+        left: 35%;
+        top: 100px;
+    }
+    .form-group-25{
+        position: absolute;
+        left: 5%;
+        top: 200px;
+    }
+    .form-group-26{
+        position: absolute;
+        left: 5%;
+        top: 150px;
+    }
+    .form-group-27{
+        position: absolute;
+        left: 65%;
+        top:50px;
+    }
+    .form-group-28{
+        position: absolute;
+        left: 35%;
+        top:200px;
+    }
+    .form-group-29{
+        position: absolute;
+        left: 5%;
+        top:250px;
+    }
+    .form-group-30{
+        position: absolute;
+        left: 35%;
+        top:250px;
+    }
+    .form-group-31{
+        position: absolute;
+        left: 65%;
+        top:250px;
+    }
+    .form-button-1{
+        position: absolute;
+        left: 45%;
+    top: 290px;
+    }
+    .text-22{
+        letter-spacing: 14px;
+    }
+    .dropdown{
+        list-style:none;
+        color: #000;
+    
+    }
+    .dropdown-text{
+        color: #000;
+        font-size: 15px;
+    }
+    .dropdown-menu{
+        color: #000;
+    }
+    .form-login{
+        position: relative;
+        width: 300px;
+        height: 380px;
+        top: 150px;
+        left: 37%;
+        border-width: 1px;
+        border-color: #757575;
+        border-style: solid;
+
+    }
+    .form-group-40{
+        position: absolute;
+        left: 5%;
+        top:80px;
+        width:250px;
+    }
+    .form-group-41{
+        position: absolute;
+        left: 5%;
+        top:150px;
+        width:250px;
+    }
+    .form-group-42{
+        position: absolute;
+        
+        top:245px;
+        width:250px;
+    }
+    .form-group-43{
+        position: absolute;
+        left: 45%;
+        top:245px;
+        width:250px;
+    }

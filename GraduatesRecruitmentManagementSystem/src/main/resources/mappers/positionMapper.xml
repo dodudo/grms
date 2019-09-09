@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.ganin.dao.positionMapper" >
+  <resultMap id="BaseResultMap" type="cn.ganin.pojo.position" >
+    <constructor >
+      <idArg column="position_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="position_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_address" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_time" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_num" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_edu" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_experience" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_salary" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_start_time" jdbcType="DATE" javaType="java.util.Date" />
+      <arg column="position_end_time" jdbcType="DATE" javaType="java.util.Date" />
+      <arg column="position_edit_time" jdbcType="DATE" javaType="java.util.Date" />
+      <arg column="position_enterprise_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="position_publish_state" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_state" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </constructor>
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="cn.ganin.pojo.positionandenterprise" >
+    <constructor >
+      <idArg column="position_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="position_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_address" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_time" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_num" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_edu" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_experience" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_salary" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_start_time" jdbcType="DATE" javaType="java.util.Date" />
+      <arg column="position_end_time" jdbcType="DATE" javaType="java.util.Date" />
+      <arg column="position_edit_time" jdbcType="DATE" javaType="java.util.Date" />
+      <arg column="position_enterprise_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="position_publish_state" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_state" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="position_desc" jdbcType="LONGVARCHAR" javaType="java.lang.String" />
+      <arg column="position_duty" jdbcType="LONGVARCHAR" javaType="java.lang.String" />
+      <arg column="enterprise_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="enterprise_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="enterprise_password" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="enterprise_username" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="enterprise_address" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="enterprise_contact" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="enterprise_phone" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="enterprise_email" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="enterprise_website" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="enterprise_scale" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="enterprise_nature" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="enterprise_role_id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="enterprise_industry_name" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="enterprise_state" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="enterprise_desc" jdbcType="LONGVARCHAR" javaType="java.lang.String" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    position_id, position_name, position_address, position_time, position_num, position_edu, 
+    position_experience, position_salary, position_start_time, position_end_time, position_edit_time, 
+    position_enterprise_id, position_publish_state, position_state
+  </sql>
+  <sql id="Blob_Column_List" >
+    position_desc, position_duty
+  </sql>
+
+
+  <!--<select id="searchByName" resultMap="BaseResultMap" parameterType="String" >-->
+    <!--select-->
+    <!--<include refid="Base_Column_List" />-->
+    <!--,-->
+    <!--<include refid="Blob_Column_List" />-->
+    <!--from position-->
+    <!--where position_name LIKE concat(concat('%',#{name}),'%')-->
+  <!--</select>-->
+  <select id="searchByName" parameterType="String" resultMap="ResultMapWithBLOBs">
+    ${sql}
+</select>
+  <select id="searchAll" parameterType="String" resultMap="ResultMapWithBLOBs">
+    ${sql}
+</select>
+  <select id="details" parameterType="String" resultMap="ResultMapWithBLOBs">
+    ${sql}
+</select>
+
+  <select id="apples" parameterType="String" resultMap="ResultMapWithBLOBs">
+    ${sql}
+</select>
+
+
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from position
+    where position_id = #{positionId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from position
+    where position_id = #{positionId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.ganin.pojo.positionWithBLOBs" >
+    insert into position (position_id, position_name, position_address, 
+      position_time, position_num, position_edu, 
+      position_experience, position_salary, position_start_time, 
+      position_end_time, position_edit_time, position_enterprise_id, 
+      position_publish_state, position_state, position_desc, 
+      position_duty)
+    values (#{positionId,jdbcType=INTEGER}, #{positionName,jdbcType=VARCHAR}, #{positionAddress,jdbcType=VARCHAR}, 
+      #{positionTime,jdbcType=VARCHAR}, #{positionNum,jdbcType=VARCHAR}, #{positionEdu,jdbcType=VARCHAR}, 
+      #{positionExperience,jdbcType=VARCHAR}, #{positionSalary,jdbcType=VARCHAR}, #{positionStartTime,jdbcType=DATE}, 
+      #{positionEndTime,jdbcType=DATE}, #{positionEditTime,jdbcType=DATE}, #{positionEnterpriseId,jdbcType=INTEGER}, 
+      #{positionPublishState,jdbcType=VARCHAR}, #{positionState,jdbcType=VARCHAR}, #{positionDesc,jdbcType=LONGVARCHAR}, 
+      #{positionDuty,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.ganin.pojo.positionWithBLOBs" >
+    insert into position
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="positionId != null" >
+        position_id,
+      </if>
+      <if test="positionName != null" >
+        position_name,
+      </if>
+      <if test="positionAddress != null" >
+        position_address,
+      </if>
+      <if test="positionTime != null" >
+        position_time,
+      </if>
+      <if test="positionNum != null" >
+        position_num,
+      </if>
+      <if test="positionEdu != null" >
+        position_edu,
+      </if>
+      <if test="positionExperience != null" >
+        position_experience,
+      </if>
+      <if test="positionSalary != null" >
+        position_salary,
+      </if>
+      <if test="positionStartTime != null" >
+        position_start_time,
+      </if>
+      <if test="positionEndTime != null" >
+        position_end_time,
+      </if>
+      <if test="positionEditTime != null" >
+        position_edit_time,
+      </if>
+      <if test="positionEnterpriseId != null" >
+        position_enterprise_id,
+      </if>
+      <if test="positionPublishState != null" >
+        position_publish_state,
+      </if>
+      <if test="positionState != null" >
+        position_state,
+      </if>
+      <if test="positionDesc != null" >
+        position_desc,
+      </if>
+      <if test="positionDuty != null" >
+        position_duty,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="positionId != null" >
+        #{positionId,jdbcType=INTEGER},
+      </if>
+      <if test="positionName != null" >
+        #{positionName,jdbcType=VARCHAR},
+      </if>
+      <if test="positionAddress != null" >
+        #{positionAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="positionTime != null" >
+        #{positionTime,jdbcType=VARCHAR},
+      </if>
+      <if test="positionNum != null" >
+        #{positionNum,jdbcType=VARCHAR},
+      </if>
+      <if test="positionEdu != null" >
+        #{positionEdu,jdbcType=VARCHAR},
+      </if>
+      <if test="positionExperience != null" >
+        #{positionExperience,jdbcType=VARCHAR},
+      </if>
+      <if test="positionSalary != null" >
+        #{positionSalary,jdbcType=VARCHAR},
+      </if>
+      <if test="positionStartTime != null" >
+        #{positionStartTime,jdbcType=DATE},
+      </if>
+      <if test="positionEndTime != null" >
+        #{positionEndTime,jdbcType=DATE},
+      </if>
+      <if test="positionEditTime != null" >
+        #{positionEditTime,jdbcType=DATE},
+      </if>
+      <if test="positionEnterpriseId != null" >
+        #{positionEnterpriseId,jdbcType=INTEGER},
+      </if>
+      <if test="positionPublishState != null" >
+        #{positionPublishState,jdbcType=VARCHAR},
+      </if>
+      <if test="positionState != null" >
+        #{positionState,jdbcType=VARCHAR},
+      </if>
+      <if test="positionDesc != null" >
+        #{positionDesc,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="positionDuty != null" >
+        #{positionDuty,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.ganin.pojo.positionWithBLOBs" >
+    update position
+    <set >
+      <if test="positionName != null" >
+        position_name = #{positionName,jdbcType=VARCHAR},
+      </if>
+      <if test="positionAddress != null" >
+        position_address = #{positionAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="positionTime != null" >
+        position_time = #{positionTime,jdbcType=VARCHAR},
+      </if>
+      <if test="positionNum != null" >
+        position_num = #{positionNum,jdbcType=VARCHAR},
+      </if>
+      <if test="positionEdu != null" >
+        position_edu = #{positionEdu,jdbcType=VARCHAR},
+      </if>
+      <if test="positionExperience != null" >
+        position_experience = #{positionExperience,jdbcType=VARCHAR},
+      </if>
+      <if test="positionSalary != null" >
+        position_salary = #{positionSalary,jdbcType=VARCHAR},
+      </if>
+      <if test="positionStartTime != null" >
+        position_start_time = #{positionStartTime,jdbcType=DATE},
+      </if>
+      <if test="positionEndTime != null" >
+        position_end_time = #{positionEndTime,jdbcType=DATE},
+      </if>
+      <if test="positionEditTime != null" >
+        position_edit_time = #{positionEditTime,jdbcType=DATE},
+      </if>
+      <if test="positionEnterpriseId != null" >
+        position_enterprise_id = #{positionEnterpriseId,jdbcType=INTEGER},
+      </if>
+      <if test="positionPublishState != null" >
+        position_publish_state = #{positionPublishState,jdbcType=VARCHAR},
+      </if>
+      <if test="positionState != null" >
+        position_state = #{positionState,jdbcType=VARCHAR},
+      </if>
+      <if test="positionDesc != null" >
+        position_desc = #{positionDesc,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="positionDuty != null" >
+        position_duty = #{positionDuty,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where position_id = #{positionId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="cn.ganin.pojo.positionWithBLOBs" >
+    update position
+    set position_name = #{positionName,jdbcType=VARCHAR},
+      position_address = #{positionAddress,jdbcType=VARCHAR},
+      position_time = #{positionTime,jdbcType=VARCHAR},
+      position_num = #{positionNum,jdbcType=VARCHAR},
+      position_edu = #{positionEdu,jdbcType=VARCHAR},
+      position_experience = #{positionExperience,jdbcType=VARCHAR},
+      position_salary = #{positionSalary,jdbcType=VARCHAR},
+      position_start_time = #{positionStartTime,jdbcType=DATE},
+      position_end_time = #{positionEndTime,jdbcType=DATE},
+      position_edit_time = #{positionEditTime,jdbcType=DATE},
+      position_enterprise_id = #{positionEnterpriseId,jdbcType=INTEGER},
+      position_publish_state = #{positionPublishState,jdbcType=VARCHAR},
+      position_state = #{positionState,jdbcType=VARCHAR},
+      position_desc = #{positionDesc,jdbcType=LONGVARCHAR},
+      position_duty = #{positionDuty,jdbcType=LONGVARCHAR}
+    where position_id = #{positionId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.ganin.pojo.position" >
+    update position
+    set position_name = #{positionName,jdbcType=VARCHAR},
+      position_address = #{positionAddress,jdbcType=VARCHAR},
+      position_time = #{positionTime,jdbcType=VARCHAR},
+      position_num = #{positionNum,jdbcType=VARCHAR},
+      position_edu = #{positionEdu,jdbcType=VARCHAR},
+      position_experience = #{positionExperience,jdbcType=VARCHAR},
+      position_salary = #{positionSalary,jdbcType=VARCHAR},
+      position_start_time = #{positionStartTime,jdbcType=DATE},
+      position_end_time = #{positionEndTime,jdbcType=DATE},
+      position_edit_time = #{positionEditTime,jdbcType=DATE},
+      position_enterprise_id = #{positionEnterpriseId,jdbcType=INTEGER},
+      position_publish_state = #{positionPublishState,jdbcType=VARCHAR},
+      position_state = #{positionState,jdbcType=VARCHAR}
+    where position_id = #{positionId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,1143 @@
+<!-- 招聘首页 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>招聘首页</title>
+    <link rel="stylesheet" type="text/css" href="../../css/home.css">
+    <link rel="stylesheet" type="text/css" href="../../css/home1.css">
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.aui-content-main .aui-content-menu').hover(function(){
+
+                $(this).addClass('active').find('s').hide();
+
+                $(this).find('.aui-content-menu-dow').show();
+
+            },function(){
+
+                $(this).removeClass('active').find('s').show();
+
+                $(this).find('.aui-content-menu-dow').hide();
+
+            });
+
+        });
+        $(function(){
+            $('#myCarousel').carousel({interval:1000});
+        })
+
+    </script>
+</head>
+<body>
+<div class="top-bar" >
+    <nav class="navbar navbar-default navbar-fixed-top row" style="background-color: white">
+        <div class="col-md-8"></div>
+        <div class="col-md-4 col-xs-4">
+            <ul class="nav nav-pills ban ul2">
+                <li role="presentation" style="margin-top: 10px;" id="sy">欢迎回来，<span id="username"></span></li>
+                <li role="presentation"><a href="home.html">主页</a> </li>
+                <li role="presentation"><a id="grzx" href="http://localhost:8080/myself.jsp" target="_self">个人中心</a> </li>
+                <li role="presentation"><a href="">帮助</a> </li>
+                <li role="presentation"><a href="">联系我们</a> </li>
+            </ul>
+        </div>
+        <div class="search">
+            <!--<form method="get" action="">-->
+            <!--<input type="text" name="find" placeholder="请输入您所寻找的职位">-->
+            <!--<input style="width: 80px;background-color: #1787FB;color: white" type="submit" name="search" value="查找">-->
+            <!--</form>-->
+            <form action="/index/search">
+                <input type="text" name="find" placeholder="请输入您所寻找的职位">
+                <input style="width: 80px;background-color: #1787FB;color: white" value="查找" id="searchs" type="submit">
+            </form>
+        </div>
+    </nav>
+</div>
+<div class="second row">
+    <div class="col-md-2">
+        <a href="">首页</a>
+    </div>
+    <div class="col-md-2">
+        <a href="">城市频道</a>
+    </div>
+    <div class="col-md-2">
+        <a href="">校园招聘</a>
+    </div>
+    <div class="col-md-2">
+        <a href="">高端职位</a>
+    </div>
+    <div class="col-md-2">
+        <a href="">海外招聘</a>
+    </div>
+    <div class="col-md-2">
+        <a href="">联系我们</a>
+    </div>
+</div><hr>
+<div class="container-main">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="aui-container-bxo clearfix" style="position: relative;margin-left: 60px;">
+                <div class="aui-content-sidebar clearfix" id="nav" style="margin-top: 10px;">
+                    <div class="aui-content-main">
+                        <div class="aui-content-menu">
+                            <div class="aui-content-menu-head">
+                                <div class="aui-content-menu-head-list">
+                                    <h2>产品</h2>
+                                    <a href="http://localhost:8080/index/search?find=产品总监">产品总监</a>
+                                    <a href="http://localhost:8080/index/search?find=产品经理">产品经理</a>
+                                    <a href="http://localhost:8080/index/search?find=数据产品">数据产品</a>
+                                    <i class="aui-content-menu-head-list-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="aui-content-menu-dow aui-ds">
+                                <dl>
+                                    <dt>
+                                        <span>后端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="http://localhost:8080/index/search?find=Java" class="aui-a-curr">Java</a>
+                                        <a href="http://localhost:8080/index/search?find=C++" class="aui-a-curr">C++ </a>
+                                        <a href="http://localhost:8080/index/search?find=PHP" class="aui-a-curr">PHP</a>
+                                        <a href="http://localhost:8080/index/search?find=数据挖掘">数据挖掘</a>
+                                        <a href="http://localhost:8080/index/search?find=搜索算法">搜索算法</a>
+                                        <a href="http://localhost:8080/index/search?find=精准推荐" class="aui-a-curr">精准推荐</a>
+                                        <a href="http://localhost:8080/index/search?find=c"> C C# </a>
+                                        <a href="http://localhost:8080/index/search?find=全栈工程师" class="aui-a-curr">全栈工程师</a>
+                                        <a href="http://localhost:8080/index/search?find=NET">NET</a>
+                                        <a href="http://localhost:8080/index/search?find=Hadoop" class="aui-a-curr">Hadoop</a>
+                                        <a href="http://localhost:8080/index/search?find=Python">Python</a>
+                                        <a href="http://localhost:8080/index/search?find=Delphi" class="aui-a-curr">Delphi</a>
+                                        <a href="http://localhost:8080/index/search?find=Perl">Perl</a>
+                                        <a href="http://localhost:8080/index/search?find=Ruby">Ruby</a>
+                                        <a href="http://localhost:8080/index/search?find=Node">Node.js</a>
+                                        <a href="http://localhost:8080/index/search?find=Go">Go</a>
+                                        <a href="http://localhost:8080/index/search?find=ASP">ASP</a>
+                                        <a href="http://localhost:8080/index/search?find=Shell">Shell</a>
+                                        <a href="http://localhost:8080/index/search?find=区块链">区块</a>
+                                        <a href="http://localhost:8080/index/search?find=后端开发">后端开发</a>
+                                        <a href="http://localhost:8080/index/search?find=其他">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>移动开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="http://localhost:8080/index/search?find=HTML5" class="aui-a-curr">HTML5</a>
+                                        <a href="http://localhost:8080/index/search?find=Android" class="aui-a-curr">Android </a>
+                                        <a href="http://localhost:8080/index/search?find=IOS" class="aui-a-curr">iOS</a>
+                                        <a href="http://localhost:8080/index/search?find=移动">移动</a>
+                                        <a href="http://localhost:8080/index/search?find=WP">WP</a>
+                                        <a href="http://localhost:8080/index/search?find=CSS3" class="aui-a-curr">css3</a>
+                                        <a href="http://localhost:8080/index/search?find=C#"> C C# </a>
+                                        <a href="http://localhost:8080/index/search?find=Jquery" class="aui-a-curr">jquery</a>
+                                        <a href="http://localhost:8080/index/search?find=Jquery" >移动开发</a>
+                                        <a href="http://localhost:8080/index/search?find=Jquery" >其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>前端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="http://localhost:8080/index/search?find=web前端" class="aui-a-curr">web前端</a>
+                                        <a  href="http://localhost:8080/index/search?find=Flash" class="aui-a-curr">Flash++ </a>
+                                        <a  href="http://localhost:8080/index/search?find=PHP" class="aui-a-curr">PHP</a>
+                                        <a  href="http://localhost:8080/index/search?find=html5" >html5</a>
+                                        <a href="#">JavaScript</a>
+                                        <a href="#" class="aui-a-curr">COCOS2D</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">U3D-X </a>
+                                        <a href="#">css</a>
+                                        <a href="#" class="aui-a-curr">js</a>
+                                        <a href="#">jq</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>高端职位</span>
+                                    </dt>
+                                    <dd>
+                                        <a  href="http://localhost:8080/index/search?find=Jquery"  class="aui-a-curr">技术经理 </a>
+                                        <a  href="http://localhost:8080/index/search?find=Jquery"  class="aui-a-curr">技术总监++ </a>
+                                        <a  href="http://localhost:8080/index/search?find=Jquery"  class="aui-a-curr">PHP</a>
+                                        <a  href="http://localhost:8080/index/search?find=Jquery" > 架构师 </a>
+                                        <a  href="http://localhost:8080/index/search?find=Jquery" >CTO</a>
+                                        <a  href="http://localhost:8080/index/search?find=Jquery"  class="aui-a-curr"> 运维总监</a>
+                                        <a  href="http://localhost:8080/index/search?find=Jquery" > C C# </a>
+                                        <a  href="http://localhost:8080/index/search?find=Jquery"  class="aui-a-curr"> 技术合伙人-X </a>
+                                        <a  href="http://localhost:8080/index/search?find=Jquery" > 项目总监 </a>
+                                        <a  href="http://localhost:8080/index/search?find=Jquery"  class="aui-a-curr">测试总监</a>
+                                        <a  href="http://localhost:8080/index/search?find=Jquery" > 安全专家</a>
+                                        <a  href="http://localhost:8080/index/search?find=Jquery" >  高端技术职位</a>
+                                        <a  href="http://localhost:8080/index/search?find=Jquery" > 其它</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="aui-content-menu">
+                            <div class="aui-content-menu-head">
+                                <div class="aui-content-menu-head-list">
+                                    <h2>职能</h2>
+                                    <a href= href="http://localhost:8080/index/search?find=行政" >行政</a>
+                                    <a href= href="http://localhost:8080/index/search?find=财务" >财务</a>
+                                    <a href= href="http://localhost:8080/index/search?find=人事" >人事</a>
+                                    <a href= href="http://localhost:8080/index/search?find=HR" >HR</a>
+                                    <a href= href="http://localhost:8080/index/search?find=审计" >审计</a>
+                                    <i class="aui-content-menu-head-list-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="aui-content-menu-dow aui-ds">
+                                <dl>
+                                    <dt>
+                                        <span>后端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">Java</a>
+                                        <a href="#" class="aui-a-curr">C++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">数据挖掘</a>
+                                        <a href="#">搜索算法</a>
+                                        <a href="#" class="aui-a-curr">精准推荐</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">全栈工程师</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">Hadoop</a>
+                                        <a href="#">Python</a>
+                                        <a href="#" class="aui-a-curr">Delphi</a>
+                                        <a href="#">Perl</a>
+                                        <a href="#">Ruby</a>
+                                        <a href="#">Node.js</a>
+                                        <a href="#">Go</a>
+                                        <a href="#">ASP</a>
+                                        <a href="#">Shell</a>
+                                        <a href="#">区块</a>
+                                        <a href="#">后端开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>移动开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">HTML5</a>
+                                        <a href="#" class="aui-a-curr">Android </a>
+                                        <a href="#" class="aui-a-curr">iOS</a>
+                                        <a href="#">移动</a>
+                                        <a href="#">WP</a>
+                                        <a href="#" class="aui-a-curr">css3</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">jquery</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">其它</a>
+                                        <a href="#">移动开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>前端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">web前端</a>
+                                        <a href="#" class="aui-a-curr">Flash++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">html5</a>
+                                        <a href="#">JavaScript</a>
+                                        <a href="#" class="aui-a-curr">COCOS2D</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">U3D-X </a>
+                                        <a href="#">css</a>
+                                        <a href="#" class="aui-a-curr">js</a>
+                                        <a href="#">jq</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>高端职位</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">技术经理 </a>
+                                        <a href="#" class="aui-a-curr">技术总监++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#"> 架构师 </a>
+                                        <a href="#">CTO</a>
+                                        <a href="#" class="aui-a-curr"> 运维总监</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr"> 技术合伙人-X </a>
+                                        <a href="#"> 项目总监 </a>
+                                        <a href="#" class="aui-a-curr">测试总监</a>
+                                        <a href="#"> 安全专家</a>
+                                        <a href="#">  高端技术职位</a>
+                                        <a href="#"> 其它</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="aui-content-menu ">
+                            <div class="aui-content-menu-head">
+                                <div class="aui-content-menu-head-list">
+                                    <h2>用户研究</h2>
+                                    <a href="#">大数据</a>
+                                    <a href="#">分析师</a>
+                                    <a href="#">数据产品</a>
+                                    <i class="aui-content-menu-head-list-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="aui-content-menu-dow aui-ds">
+                                <dl>
+                                    <dt>
+                                        <span>后端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">Java</a>
+                                        <a href="#" class="aui-a-curr">C++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">数据挖掘</a>
+                                        <a href="#">搜索算法</a>
+                                        <a href="#" class="aui-a-curr">精准推荐</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">全栈工程师</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">Hadoop</a>
+                                        <a href="#">Python</a>
+                                        <a href="#" class="aui-a-curr">Delphi</a>
+                                        <a href="#">Perl</a>
+                                        <a href="#">Ruby</a>
+                                        <a href="#">Node.js</a>
+                                        <a href="#">Go</a>
+                                        <a href="#">ASP</a>
+                                        <a href="#">Shell</a>
+                                        <a href="#">区块</a>
+                                        <a href="#">后端开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>移动开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">HTML5</a>
+                                        <a href="#" class="aui-a-curr">Android </a>
+                                        <a href="#" class="aui-a-curr">iOS</a>
+                                        <a href="#">移动</a>
+                                        <a href="#">WP</a>
+                                        <a href="#" class="aui-a-curr">css3</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">jquery</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">其它</a>
+                                        <a href="#">移动开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>前端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">web前端</a>
+                                        <a href="#" class="aui-a-curr">Flash++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">html5</a>
+                                        <a href="#">JavaScript</a>
+                                        <a href="#" class="aui-a-curr">COCOS2D</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">U3D-X </a>
+                                        <a href="#">css</a>
+                                        <a href="#" class="aui-a-curr">js</a>
+                                        <a href="#">jq</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>高端职位</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">技术经理 </a>
+                                        <a href="#" class="aui-a-curr">技术总监++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#"> 架构师 </a>
+                                        <a href="#">CTO</a>
+                                        <a href="#" class="aui-a-curr"> 运维总监</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr"> 技术合伙人-X </a>
+                                        <a href="#"> 项目总监 </a>
+                                        <a href="#" class="aui-a-curr">测试总监</a>
+                                        <a href="#"> 安全专家</a>
+                                        <a href="#">  高端技术职位</a>
+                                        <a href="#"> 其它</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="aui-content-menu ">
+                            <div class="aui-content-menu-head">
+                                <div class="aui-content-menu-head-list">
+                                    <h2>人工智能</h2>
+                                    <a href="#">人机学习</a>
+                                    <a href="#">自动化</a>
+                                    <a href="#">互联网</a>
+                                    <i class="aui-content-menu-head-list-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="aui-content-menu-dow aui-ds">
+                                <dl>
+                                    <dt>
+                                        <span>后端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">Java</a>
+                                        <a href="#" class="aui-a-curr">C++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">数据挖掘</a>
+                                        <a href="#">搜索算法</a>
+                                        <a href="#" class="aui-a-curr">精准推荐</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">全栈工程师</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">Hadoop</a>
+                                        <a href="#">Python</a>
+                                        <a href="#" class="aui-a-curr">Delphi</a>
+                                        <a href="#">Perl</a>
+                                        <a href="#">Ruby</a>
+                                        <a href="#">Node.js</a>
+                                        <a href="#">Go</a>
+                                        <a href="#">ASP</a>
+                                        <a href="#">Shell</a>
+                                        <a href="#">区块</a>
+                                        <a href="#">后端开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>移动开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">HTML5</a>
+                                        <a href="#" class="aui-a-curr">Android </a>
+                                        <a href="#" class="aui-a-curr">iOS</a>
+                                        <a href="#">移动</a>
+                                        <a href="#">WP</a>
+                                        <a href="#" class="aui-a-curr">css3</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">jquery</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">其它</a>
+                                        <a href="#">移动开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>前端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">web前端</a>
+                                        <a href="#" class="aui-a-curr">Flash++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">html5</a>
+                                        <a href="#">JavaScript</a>
+                                        <a href="#" class="aui-a-curr">COCOS2D</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">U3D-X </a>
+                                        <a href="#">css</a>
+                                        <a href="#" class="aui-a-curr">js</a>
+                                        <a href="#">jq</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>高端职位</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">技术经理 </a>
+                                        <a href="#" class="aui-a-curr">技术总监++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#"> 架构师 </a>
+                                        <a href="#">CTO</a>
+                                        <a href="#" class="aui-a-curr"> 运维总监</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr"> 技术合伙人-X </a>
+                                        <a href="#"> 项目总监 </a>
+                                        <a href="#" class="aui-a-curr">测试总监</a>
+                                        <a href="#"> 安全专家</a>
+                                        <a href="#">  高端技术职位</a>
+                                        <a href="#"> 其它</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="aui-content-menu ">
+                            <div class="aui-content-menu-head">
+                                <div class="aui-content-menu-head-list">
+                                    <h2>运维</h2>
+                                    <a href="#">数据</a>
+                                    <a href="#">网络工程师</a>
+                                    <a href="#">运维</a>
+                                    <i class="aui-content-menu-head-list-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="aui-content-menu-dow aui-ds">
+                                <dl>
+                                    <dt>
+                                        <span>后端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">Java</a>
+                                        <a href="#" class="aui-a-curr">C++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">数据挖掘</a>
+                                        <a href="#">搜索算法</a>
+                                        <a href="#" class="aui-a-curr">精准推荐</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">全栈工程师</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">Hadoop</a>
+                                        <a href="#">Python</a>
+                                        <a href="#" class="aui-a-curr">Delphi</a>
+                                        <a href="#">Perl</a>
+                                        <a href="#">Ruby</a>
+                                        <a href="#">Node.js</a>
+                                        <a href="#">Go</a>
+                                        <a href="#">ASP</a>
+                                        <a href="#">Shell</a>
+                                        <a href="#">区块</a>
+                                        <a href="#">后端开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>移动开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">HTML5</a>
+                                        <a href="#" class="aui-a-curr">Android </a>
+                                        <a href="#" class="aui-a-curr">iOS</a>
+                                        <a href="#">移动</a>
+                                        <a href="#">WP</a>
+                                        <a href="#" class="aui-a-curr">css3</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">jquery</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">其它</a>
+                                        <a href="#">移动开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>前端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">web前端</a>
+                                        <a href="#" class="aui-a-curr">Flash++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">html5</a>
+                                        <a href="#">JavaScript</a>
+                                        <a href="#" class="aui-a-curr">COCOS2D</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">U3D-X </a>
+                                        <a href="#">css</a>
+                                        <a href="#" class="aui-a-curr">js</a>
+                                        <a href="#">jq</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>高端职位</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">技术经理 </a>
+                                        <a href="#" class="aui-a-curr">技术总监++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#"> 架构师 </a>
+                                        <a href="#">CTO</a>
+                                        <a href="#" class="aui-a-curr"> 运维总监</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr"> 技术合伙人-X </a>
+                                        <a href="#"> 项目总监 </a>
+                                        <a href="#" class="aui-a-curr">测试总监</a>
+                                        <a href="#"> 安全专家</a>
+                                        <a href="#">  高端技术职位</a>
+                                        <a href="#"> 其它</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="aui-content-menu ">
+                            <div class="aui-content-menu-head">
+                                <div class="aui-content-menu-head-list">
+                                    <h2>交互设计</h2>
+                                    <a href="#">设计</a>
+                                    <a href="#">BD</a>
+                                    <a href="#">前端开发</a>
+                                    <i class="aui-content-menu-head-list-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="aui-content-menu-dow aui-ds">
+                                <dl>
+                                    <dt>
+                                        <span>后端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">Java</a>
+                                        <a href="#" class="aui-a-curr">C++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">数据挖掘</a>
+                                        <a href="#">搜索算法</a>
+                                        <a href="#" class="aui-a-curr">精准推荐</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">全栈工程师</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">Hadoop</a>
+                                        <a href="#">Python</a>
+                                        <a href="#" class="aui-a-curr">Delphi</a>
+                                        <a href="#">Perl</a>
+                                        <a href="#">Ruby</a>
+                                        <a href="#">Node.js</a>
+                                        <a href="#">Go</a>
+                                        <a href="#">ASP</a>
+                                        <a href="#">Shell</a>
+                                        <a href="#">区块</a>
+                                        <a href="#">后端开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>移动开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">HTML5</a>
+                                        <a href="#" class="aui-a-curr">Android </a>
+                                        <a href="#" class="aui-a-curr">iOS</a>
+                                        <a href="#">移动</a>
+                                        <a href="#">WP</a>
+                                        <a href="#" class="aui-a-curr">css3</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">jquery</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">其它</a>
+                                        <a href="#">移动开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>前端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">web前端</a>
+                                        <a href="#" class="aui-a-curr">Flash++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">html5</a>
+                                        <a href="#">JavaScript</a>
+                                        <a href="#" class="aui-a-curr">COCOS2D</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">U3D-X </a>
+                                        <a href="#">css</a>
+                                        <a href="#" class="aui-a-curr">js</a>
+                                        <a href="#">jq</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>高端职位</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">技术经理 </a>
+                                        <a href="#" class="aui-a-curr">技术总监++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#"> 架构师 </a>
+                                        <a href="#">CTO</a>
+                                        <a href="#" class="aui-a-curr"> 运维总监</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr"> 技术合伙人-X </a>
+                                        <a href="#"> 项目总监 </a>
+                                        <a href="#" class="aui-a-curr">测试总监</a>
+                                        <a href="#"> 安全专家</a>
+                                        <a href="#">  高端技术职位</a>
+                                        <a href="#"> 其它</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="aui-content-menu ">
+                            <div class="aui-content-menu-head">
+                                <div class="aui-content-menu-head-list">
+                                    <h2>运营</h2>
+                                    <a href="#">新媒体运营</a>
+                                    <a href="#">产品编辑</a>
+                                    <a href="#">运营总监</a>
+                                    <i class="aui-content-menu-head-list-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="aui-content-menu-dow aui-ds">
+                                <dl>
+                                    <dt>
+                                        <span>后端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">Java</a>
+                                        <a href="#" class="aui-a-curr">C++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">数据挖掘</a>
+                                        <a href="#">搜索算法</a>
+                                        <a href="#" class="aui-a-curr">精准推荐</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">全栈工程师</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">Hadoop</a>
+                                        <a href="#">Python</a>
+                                        <a href="#" class="aui-a-curr">Delphi</a>
+                                        <a href="#">Perl</a>
+                                        <a href="#">Ruby</a>
+                                        <a href="#">Node.js</a>
+                                        <a href="#">Go</a>
+                                        <a href="#">ASP</a>
+                                        <a href="#">Shell</a>
+                                        <a href="#">区块</a>
+                                        <a href="#">后端开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>移动开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">HTML5</a>
+                                        <a href="#" class="aui-a-curr">Android </a>
+                                        <a href="#" class="aui-a-curr">iOS</a>
+                                        <a href="#">移动</a>
+                                        <a href="#">WP</a>
+                                        <a href="#" class="aui-a-curr">css3</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">jquery</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">其它</a>
+                                        <a href="#">移动开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>前端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">web前端</a>
+                                        <a href="#" class="aui-a-curr">Flash++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">html5</a>
+                                        <a href="#">JavaScript</a>
+                                        <a href="#" class="aui-a-curr">COCOS2D</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">U3D-X </a>
+                                        <a href="#">css</a>
+                                        <a href="#" class="aui-a-curr">js</a>
+                                        <a href="#">jq</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>高端职位</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">技术经理 </a>
+                                        <a href="#" class="aui-a-curr">技术总监++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#"> 架构师 </a>
+                                        <a href="#">CTO</a>
+                                        <a href="#" class="aui-a-curr"> 运维总监</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr"> 技术合伙人-X </a>
+                                        <a href="#"> 项目总监 </a>
+                                        <a href="#" class="aui-a-curr">测试总监</a>
+                                        <a href="#"> 安全专家</a>
+                                        <a href="#">  高端技术职位</a>
+                                        <a href="#"> 其它</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="aui-content-menu ">
+                            <div class="aui-content-menu-head">
+                                <div class="aui-content-menu-head-list">
+                                    <h2>金融</h2>
+                                    <a href="#">并购</a>
+                                    <a href="#">投资</a>
+                                    <a href="#">风控</a>
+                                    <a href="#">财经</a>
+                                    <a href="#">融资</a>
+                                    <i class="aui-content-menu-head-list-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="aui-content-menu-dow aui-ds">
+                                <dl>
+                                    <dt>
+                                        <span>后端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">Java</a>
+                                        <a href="#" class="aui-a-curr">C++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">数据挖掘</a>
+                                        <a href="#">搜索算法</a>
+                                        <a href="#" class="aui-a-curr">精准推荐</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">全栈工程师</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">Hadoop</a>
+                                        <a href="#">Python</a>
+                                        <a href="#" class="aui-a-curr">Delphi</a>
+                                        <a href="#">Perl</a>
+                                        <a href="#">Ruby</a>
+                                        <a href="#">Node.js</a>
+                                        <a href="#">Go</a>
+                                        <a href="#">ASP</a>
+                                        <a href="#">Shell</a>
+                                        <a href="#">区块</a>
+                                        <a href="#">后端开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>移动开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">HTML5</a>
+                                        <a href="#" class="aui-a-curr">Android </a>
+                                        <a href="#" class="aui-a-curr">iOS</a>
+                                        <a href="#">移动</a>
+                                        <a href="#">WP</a>
+                                        <a href="#" class="aui-a-curr">css3</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">jquery</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">其它</a>
+                                        <a href="#">移动开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>前端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">web前端</a>
+                                        <a href="#" class="aui-a-curr">Flash++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">html5</a>
+                                        <a href="#">JavaScript</a>
+                                        <a href="#" class="aui-a-curr">COCOS2D</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">U3D-X </a>
+                                        <a href="#">css</a>
+                                        <a href="#" class="aui-a-curr">js</a>
+                                        <a href="#">jq</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>高端职位</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">技术经理 </a>
+                                        <a href="#" class="aui-a-curr">技术总监++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#"> 架构师 </a>
+                                        <a href="#">CTO</a>
+                                        <a href="#" class="aui-a-curr"> 运维总监</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr"> 技术合伙人-X </a>
+                                        <a href="#"> 项目总监 </a>
+                                        <a href="#" class="aui-a-curr">测试总监</a>
+                                        <a href="#"> 安全专家</a>
+                                        <a href="#">  高端技术职位</a>
+                                        <a href="#"> 其它</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="aui-content-menu ">
+                            <div class="aui-content-menu-head">
+                                <div class="aui-content-menu-head-list">
+                                    <h2>设计</h2>
+                                    <a href="#">交互设计</a>
+                                    <a href="#">网页设计师</a>
+                                    <a href="#">平面设计师</a>
+                                    <i class="aui-content-menu-head-list-arrow"></i>
+                                </div>
+                            </div>
+                            <div class="aui-content-menu-dow aui-ds">
+                                <dl>
+                                    <dt>
+                                        <span>后端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">Java</a>
+                                        <a href="#" class="aui-a-curr">C++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">数据挖掘</a>
+                                        <a href="#">搜索算法</a>
+                                        <a href="#" class="aui-a-curr">精准推荐</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">全栈工程师</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">Hadoop</a>
+                                        <a href="#">Python</a>
+                                        <a href="#" class="aui-a-curr">Delphi</a>
+                                        <a href="#">Perl</a>
+                                        <a href="#">Ruby</a>
+                                        <a href="#">Node.js</a>
+                                        <a href="#">Go</a>
+                                        <a href="#">ASP</a>
+                                        <a href="#">Shell</a>
+                                        <a href="#">区块</a>
+                                        <a href="#">后端开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>移动开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">HTML5</a>
+                                        <a href="#" class="aui-a-curr">Android </a>
+                                        <a href="#" class="aui-a-curr">iOS</a>
+                                        <a href="#">移动</a>
+                                        <a href="#">WP</a>
+                                        <a href="#" class="aui-a-curr">css3</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">jquery</a>
+                                        <a href="#">NET</a>
+                                        <a href="#" class="aui-a-curr">其它</a>
+                                        <a href="#">移动开发</a>
+                                        <a href="#">其它</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>前端开发</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">web前端</a>
+                                        <a href="#" class="aui-a-curr">Flash++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#">html5</a>
+                                        <a href="#">JavaScript</a>
+                                        <a href="#" class="aui-a-curr">COCOS2D</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr">U3D-X </a>
+                                        <a href="#">css</a>
+                                        <a href="#" class="aui-a-curr">js</a>
+                                        <a href="#">jq</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <span>高端职位</span>
+                                    </dt>
+                                    <dd>
+                                        <a href="#" class="aui-a-curr">技术经理 </a>
+                                        <a href="#" class="aui-a-curr">技术总监++ </a>
+                                        <a href="#" class="aui-a-curr">PHP</a>
+                                        <a href="#"> 架构师 </a>
+                                        <a href="#">CTO</a>
+                                        <a href="#" class="aui-a-curr"> 运维总监</a>
+                                        <a href="#"> C C# </a>
+                                        <a href="#" class="aui-a-curr"> 技术合伙人-X </a>
+                                        <a href="#"> 项目总监 </a>
+                                        <a href="#" class="aui-a-curr">测试总监</a>
+                                        <a href="#"> 安全专家</a>
+                                        <a href="#">  高端技术职位</a>
+                                        <a href="#"> 其它</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-md-8">
+            <div class="lunbo" style="padding-top:-100px;">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="../../imgs/lunbo1.jpg" alt="...">
+                        </div>
+                        <div class="item">
+                            <img src="../../imgs/lunbo2.jpg" alt="...">
+                        </div>
+                        <div class="item">
+                            <img src="../../imgs/lunbo3.jpg" alt="...">
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 公告栏 -->
+    <div class="tell">
+        <h3 style="font-family: 隶书;color:#1787FB">系统公告</h3>
+        <div class="details">
+            本周我们没有公告
+        </div>
+
+    </div>
+    <h3 style="font-family: 隶书;color:#1787FB;margin-left: 80px;">为您推荐</h3>
+    <div class="introduce">
+
+        <div class="row">
+            <div class="col-md-4">
+                  <div class="single">
+                      <h4 style="margin-top: 20px;" id="name1">职位名称</h4>
+                      <p id="address1">地点</p>
+                      <p id="gsname1">公司名称</p>
+                      <a class="addr1" id="gz1">7000</a>
+                  </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="single">
+                    <h4 style="margin-top: 20px;" id="name2">职位名称</h4>
+                    <p id="address2">地点</p>
+                    <p id="gsname">公司名称</p>
+                    <a class="addr2" id="gz2">工资</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="single">
+                    <h4 style="margin-top: 20px;" id="name3">职位名称</h4>
+                    <p id="address3">地点</p>
+                    <p id="gsname3">公司名称</p>
+                    <a class="addr3" id="gz3">工资</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="my-footer">
+    <div class="col-md-2 ss">
+        <ul>关于
+            <li>系统招聘</li>
+            <li>人才招聘</li>
+            <li>联系方式</li>
+            <li>网站地图</li>
+        </ul>
+    </div>
+    <div class="col-md-2 ss">
+        <ul>帮助
+            <li>加入系统</li>
+            <li>客户服务</li>
+            <li>法律声明</li>
+            <li>隐私政策</li>
+            <li>发票制度</li>
+            <li>用户协议</li>
+        </ul>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-5">
+        <h4>更懂你的价值</h4>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="../../imgs/ff.jpg"></div>
+            <div class="col-md-4"><img src="../../imgs/ff.jpg"></div>
+            <div class="col-md-4"><img src="../../imgs/ff.jpg"></div>
+            <span>未经开发人员同意，不得转载本网站之所有招聘信息及作品开发者权所有</span>
+        </div><hr>
+    </div>
+</div>
+</body>
+<script>
+    function getCookie(cookieName) {
+        var strCookie = document.cookie;
+        var arrCookie = strCookie.split("; ");
+        for(var i = 0; i < arrCookie.length; i++){
+            var arr = arrCookie[i].split("=");
+            if(cookieName == arr[0]){
+                return arr[1];
+            }
+        }
+        return "";
+    }
+    var username = getCookie("studentName");
+    $("#username").text(username)
+    if(username==""){
+        $("#grzx").attr("href","http://localhost:8080/login.jsp")
+        $("#grzx").text("登录")
+        $("#sy").text("您还未登录")
+    }
+</script>
+
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            url: "http://127.0.0.1:8080/index/serarch.do",
+            type: 'get',
+            async: false,
+            dataType: 'json',
+            data: {"name": ""},
+            success: function (res) {
+                console.log(res.data)
+                $("#name1").text(res.data.list[0].positionName)
+                $("#name2").text(res.data.list[1].positionName)
+                $("#name3").text(res.data.list[2].positionName)
+                $("#address1").text(res.data.list[0].enterpriseAddress)
+                $("#address2").text(res.data.list[1].enterpriseAddress)
+                $("#address3").text(res.data.list[2].enterpriseAddress)
+                $("#gsname1").text(res.data.list[0].enterpriseUsername)
+                $("#gsname2").text(res.data.list[1].enterpriseUsername)
+                $("#gsname3").text(res.data.list[2].enterpriseUsername)
+                $("#gz1").text(res.data.list[0].positionSalary)
+                $("#gz2").text(res.data.list[1].positionSalary)
+                $("#gz3").text(res.data.list[2].positionSalary)
+                $(".addr1").attr("href","http://localhost:8080/index/detail?id="+res.data.list[0].positionId)
+                $(".addr2").attr("href","http://localhost:8080/index/detail?id="+res.data.list[1].positionId)
+                $(".addr3").attr("href","http://localhost:8080/index/detail?id="+res.data.list[2].positionId)
+
+            },
+            error: function (data) {
+                console.log("false")
+                console.log(data)
+            }
+
+        })
+    })
+</script>
+</html>

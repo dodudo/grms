@@ -1,0 +1,152 @@
+.navbar{
+  width: 100%;
+  height: 120px;
+  border:none;
+}
+.navbar-default{
+	background-color: white;
+}
+.navbar a{
+	color: black;
+
+}
+.search{
+    width: 100%;
+    height:auto;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+.search input{
+	width: 600px;
+	height: 50px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+}
+
+.second{
+	width: 100%;
+	height: 20px;
+	margin-top: 130px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.second a{
+	font-size:16px;
+	font-weight: bold;
+	color: black;
+}
+.second a:hover{
+	text-decoration: none;
+	color: black;
+}
+.container-main{
+	width: 100%;
+	height: auto;
+	background-color: #F4F6F9;
+	position: relative;
+}
+.lead{
+	width: 220px;
+	height: 410px;
+}
+.lunbo{
+	width: 760px;
+	height: auto;
+	/*border: 1px solid black;*/
+	position:absolute;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+.carousel img{
+	width: 100%;
+	height: 100%;
+
+
+}
+/*公告栏*/
+.tell{
+	width: 90%;
+	height: 30%;
+	/*border:1px solid black;*/
+}
+.tell h3{
+	margin-left: 80px;
+}
+.details{
+	width: 100%;
+	height: auto;
+	/*border:1px solid black;*/
+}
+/*为您推荐*/
+.introduce{
+	width: 90%;
+	height: auto;
+	/*border:1px solid black;*/
+	margin-bottom: 80px;
+	margin:0 auto;
+}
+
+.details{
+	width: 80%;
+	height: auto;
+	margin:0 auto;
+}
+.single{
+	width: 350px;
+	height: 166px;
+	background-color: white;
+	border-radius: 5px;
+	margin-bottom: 30px;
+
+}
+.single h4{
+	margin-left: 10px;
+	padding-top: 30px;
+}
+.single p{
+	margin-left: 15px;
+}
+.single a{
+	color:#FF5959;
+	text-decoration: none;
+	margin-left: 270px;
+	font-weight: bold;
+	font-size: 25px;
+	padding-top: 10px;
+
+}
+.single a:hover{
+	color:#FF5959;
+	text-decoration: none;
+}
+.footer{
+	width: 100%;
+	height: 200px;
+	border: 1px solid black;
+	
+}
+.my-footer{
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  margin-top: 20px;
+  text-align: center;
+}
+.my-footer ul{
+  list-style: none;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.my-footer li{
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+}
+.my-footer h4{
+  font-weight: bold;
+  margin-top: 80px;
+  margin-right: 20px;
+}

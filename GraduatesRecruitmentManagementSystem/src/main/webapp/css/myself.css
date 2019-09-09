@@ -1,0 +1,197 @@
+body{
+  background-color: #F4F6F9;
+}
+.navbar{
+  width: 100%;
+  height: 120px;
+  border:none;
+}
+.navbar-default{
+	background-color: white;
+}
+.navbar a{
+	color: black;
+
+}
+.search{
+    width: 100%;
+    height:auto;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+.search input{
+	width: 600px;
+	height: 50px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+}
+.title-my{
+  width: 90%;
+  height: 50px;
+  /*border: 1px solid black;*/
+  margin-top: 130px;
+  margin-left: 5%;
+  margin-bottom: 20px;
+  background-color: white;
+}
+.title-my h3{
+  color: #1787FB;
+  font-weight: bold;
+  font-family: 隶书;
+  padding-top: 10px;
+}
+.tt{
+  margin-left: 20px;
+  margin-top: 0px;
+  width: 100px;
+  height: 50px;
+  border-bottom: 5px solid #1787FB;
+}
+.my-container{
+  /*width: 90%;*/
+  height: auto;
+  margin: 0 auto;
+  /*border:1px solid black;*/
+}
+/*尾部*/
+.my-footer{
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  margin-top: 60px;
+  text-align: center;
+}
+.my-footer ul{
+  list-style: none;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+.my-footer li{
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+}
+.my-footer h4{
+  font-weight: bold;
+  margin-top: 80px;
+  margin-right: 20px;
+}
+
+/*左侧*/
+.left{
+  background-color: white;
+  margin-right: 20px;
+  margin-left: 5%;
+  /*border:1px solid black;*/
+  border-radius: 3px;
+}
+.right{
+  background-color: white;
+  /*border:1px solid black;*/
+  width: 813px;
+}
+.left-one{
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+.left-one img{
+  margin-left:80px;
+}
+.left-one p{
+  font-size: 15px;
+  font-family: 微软雅黑;
+  margin-left:114px;
+  margin-top: 5px;
+}
+.left-two{
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 5px;
+  line-height: 50px;
+
+}
+.left-two a{
+  color: black;
+  text-decoration: none;
+  margin-left: 103px;
+  font-size:18px;
+  font-family: 微软雅黑;
+  
+}
+.left-two a:hover{
+  background-color: #F4F6F9;
+}
+.left-two:hover{
+  background-color: #F4F6F9;
+}
+.viewhistory{
+  width:100%;
+  height: 80px;
+  /*border:1px solid black;*/
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: #F4F6F9;
+  border-radius: 3px;
+/*  line-height:80px;*/
+}
+.viewone{
+  padding-top:6px;
+}
+.viewtwo a{
+  font-size: 20px;
+  color:black;
+  text-decoration: none;
+}
+.viewtwo a:hover{
+  color: blue;
+}
+.right-one h3{
+  font-family: 隶书;
+  color:#1787FB;
+}
+
+.myessential label{
+  font-weight: normal;
+  font-size: 15px;
+  font-family: Microsoft YaHei;
+}
+.modal-content{
+  width: 800px;
+  margin: 0 auto;
+  height: 1650px;
+}
+.modal-dialog{
+  height: auto;
+}
+.modal-body{
+    height: auto;
+}
+.modal-content form input{
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.modal-content form h4{
+  font-family: 隶书;
+  color: blue;
+}
+.modal-title{
+   font-family: 隶书;
+  color: blue;
+}
+.right-one table{
+  width: 90%;
+  height: auto;
+  margin-left: 5%;
+  margin-bottom: 20px;
+}
+.right-one table th{
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+  background-color: #F4F6F9;
+}

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>详情</title>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../css/detail.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+		 <div class="top-bar" >
+            <nav class="navbar navbar-default navbar-fixed-top row" style="background-color: white">
+        <div class="col-md-8"></div>
+        <div class="col-md-4 col-xs-4">
+           <ul class="nav nav-pills ban ul2">
+                    <li role="presentation" style="margin-top: 10px;">欢迎回来，<span id="username"></span></li>
+                    <li role="presentation"><a href="home.html">主页</a> </li>
+                    <li role="presentation"><a href="http://localhost:8080/myself.jsp" target="_self">个人中心</a> </li>
+                    <li role="presentation"><a href="">帮助</a> </li>
+                    <li role="presentation"><a href="">联系我们</a> </li>
+           </ul>
+        </div>
+    <div class="search">
+        <form action="/index/search">
+            <input type="text" name="find" placeholder="请输入您所寻找的职位">
+            <input style="width: 80px;background-color: #1787FB;color: white" value="查找" id="searchs" type="submit">
+        </form>
+    </div>
+    </nav>
+    </div>
+    <div class="second row">
+        <div class="col-md-2">
+            <a href="">首页</a>
+        </div>
+        <div class="col-md-2">
+            <a href="">城市频道</a>
+        </div>
+        <div class="col-md-2">
+            <a href="">校园招聘</a>
+        </div>
+        <div class="col-md-2">
+            <a href="">高端职位</a>
+        </div>
+        <div class="col-md-2">
+            <a href="">海外招聘</a>
+        </div>
+        <div class="col-md-2">
+            <a href="">联系我们</a>
+        </div>
+    </div><hr>
+    <div class="titt">
+    	<div class="col-md-6" style="margin-top: 30px">
+    	 <div class="row time">
+    		<span>发布于：</span><span id="starttime">时间</span>
+    	</div>
+    	<div class="row">
+    		<h3 id="gwname">岗位名称</h3>
+    	</div>
+    	<div class="row">
+    		<h4 id="scallery">工资</h4>
+    	</div>
+    	<div class="row">
+    		<!--<span style="margin-left: 90px;">英语要求</span>|-->
+            <span id="gwaddress">地点</span>|
+            <span>grade</span>|
+            <span id="gwnum">job_PersonCount</span>|
+            <span id="gwstatus">招聘状态</span>
+    	</div>
+    	</div>
+    	<div class="col-md-6">
+    		<button class="btn btn-info local" data-toggle="modal" data-target="#send" >立即申请</button>
+            <div class="modal fade" id="send" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                 <div class="modal-dialog">
+                  <div class="modal-content">    
+                     <div id="jl" class="modal-body">
+                         <div id="hide" style="display: none;"></div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+    	</div>
+    </div>
+    <div class="detail-container">
+    	<div class="col-md-8 rigth-container">
+           <div class="ess-info">
+           		<span class="stitle"  style=" font-size: 20px;">职位基本信息</span><hr style="border:1px solid lightgrey;margin-left:140px;width:540px;margin-top: -15px;">
+                 <span id="gwxl">学历</span> |<span id="gwtimework">工作时间</span> |<span id="scallery1">salary</span> |<span id="gwnum1">招聘人数</span>
+           </div>
+           <div class="job-desc">
+           	    <span class="stitle"  style=" font-size: 20px;">职位描述</span><hr style="border:1px solid lightgrey;margin-left:100px;width:583px;margin-top: -15px;">
+                <p>职位要求</p>
+           	    <pre id="gwyaoqiu">
+           	    	这里是。。。
+           	    </pre>
+                <p>岗位职责</p>
+                <pre id="gwzhize">
+                  这里是。。。
+                </pre>
+                <p>经验要求</p>
+                <pre id="gwjingyan">
+                  这里是。。。
+                </pre>
+           </div>
+           <div class="job-local">
+           	    <span class="stitle" style=" font-size: 20px;">工作地点</span><hr style="border:1px solid lightgrey;margin-left:100px;width:583px;margin-top: -15px;">
+           	    <span id="gwaddress1" style="margin-left: 20px;font-size:15px">工作地点</span>
+           </div>
+    	</div>
+    	<div class="col-md-4 left-container">
+    		<img src="../imgs/ll.jpg">
+    		<h3 id="gsname">fullname</h3>
+    		<!--<img src="../../imgs/l1.png"><p class="relocal" id="gshy">行业</p>-->
+            <img src="../../imgs/l2.png"><p class="relocal" id="gsxz">性质</p>
+    		<img src="../../imgs/l3.png"><p class="relocal" id="gsgm">规模</p>
+            <img src="../../imgs/l4.png"><p class="relocal" id="gsweb">网址</p>
+    		<pre id="gsms">description</pre>
+    	</div>	
+    </div>
+  <!-- 尾部 -->
+  <div class="my-footer">
+    	<div class="col-md-2 ss">
+    		<ul>关于
+    			<li>系统招聘</li>
+    			<li>人才招聘</li>
+    			<li>联系方式</li>
+    			<li>网站地图</li>
+    		</ul>
+    	</div>
+    	<div class="col-md-2 ss">
+    		<ul>帮助
+    			<li>加入系统</li>
+    			<li>客户服务</li>
+    			<li>法律声明</li>
+    			<li>隐私政策</li>
+    			<li>发票制度</li>
+    			<li>用户协议</li>
+    		</ul>
+    	</div>
+    	<div class="col-md-2">
+    		
+    	</div>
+    	<div class="col-md-5">
+    		<h4>更懂你的价值</h4>
+    		<div class="row">
+    			<div class="col-md-4">
+    		<img src="../../imgs/ff.jpg"></div>
+    		<div class="col-md-4"><img src="../../imgs/ff.jpg"></div>
+    		<div class="col-md-4"><img src="../../imgs/ff.jpg"></div>
+    		<span>未经开发人员同意，不得转载本网站之所有招聘信息及作品开发者权所有</span>
+    	</div><hr>
+            <p id="gwid" style="display: none;">id</p>
+            <p id="gsid" style="display: none;">id</p>
+    </div>
+</div>
+         <script>
+             function getCookie(cookieName) {
+                 var strCookie = document.cookie;
+                 var arrCookie = strCookie.split("; ");
+                 for(var i = 0; i < arrCookie.length; i++){
+                     var arr = arrCookie[i].split("=");
+                     if(cookieName == arr[0]){
+                         return arr[1];
+                     }
+                 }
+                 return "";
+             }
+             var username = getCookie("studentName");
+             var stuid = getCookie("stuid");
+             $("#username").text(username)
+         </script>
+         <script>
+             function getCookie(cookieName) {
+                 var strCookie = document.cookie;
+                 var arrCookie = strCookie.split("; ");
+                 for(var i = 0; i < arrCookie.length; i++){
+                     var arr = arrCookie[i].split("=");
+                     if(cookieName == arr[0]){
+                         return arr[1];
+                     }
+                 }
+                 return "";
+             }
+
+         </script>
+<script>
+
+    var searchUrl = window.location.href;
+    var searchData = searchUrl.split("=");
+    var values = decodeURI(searchData[1]);
+    console.log(values)
+    $(document).ready(function() {
+
+        $.ajax({
+            url:"http://127.0.0.1:8080/index/details.do",
+            type:'get',
+            async:false,
+            dataType:'json',
+            data:{"id":values},
+            success:function (res) {
+                console.log(res)
+                console.log("**********************************")
+                console.log(res.data)
+
+                $("#starttime").text(res.data[0].positionStartTime)
+                $("#gwname").text(res.data[0].positionName)
+                $("#scallery").text(res.data[0].positionSalary)
+                $("#scallery1").text(res.data[0].positionSalary)
+                $("#gwaddress").text(res.data[0].positionAddress)
+                $("#gwaddress1").text(res.data[0].positionAddress)
+                $("#gwnum").text(res.data[0].positionNum)
+                $("#gwnum1").text(res.data[0].positionNum)
+                $("#gwstatus").text(res.data[0].positionPublishState)
+                $("#gwxl").text(res.data[0].positionEdu)
+                $("#gwtimework").text(res.data[0].positionTime)
+                $("#gwyaoqiu").text(res.data[0].positionDesc)
+                $("#gwzhize").text(res.data[0].positionDuty)
+                $("#gwjingyan").text(res.data[0].positionExperience)
+                $("#gsname").text(res.data[0].enterpriseName)
+                $("#gsxz").text(res.data[0].enterpriseNature)
+                $("#gsgm").text(res.data[0].enterpriseScale)
+                $("#gsweb").text(res.data[0].enterpriseWebsite)
+                $("#gsms").text(res.data[0].enterpriseDesc)
+                $("#gwid").text(res.data[0].positionId)
+                $("#gsid").text(res.data[0].enterpriseId)
+
+            },
+            error:function(data){
+                console.log("false")
+                console.log(data)
+            }
+
+        });
+
+        $.ajax({
+            url:"http://127.0.0.1:8080/index/position.do",
+            type:'get',
+            async:false,
+            dataType:'json',
+            data:{"stuid":stuid},
+            success:function (res) {
+                for (var i =0;i<res.data.length;i++) {
+                    $("#hide").after("<div id='jianli' onclick='toudi("+res.data[i].resumeId+");' class='btn btn-success 'data-dismiss='modal' style='width:190px;height: 40px;font-size:20px;margin-left:30px;margin-bottom: 20px;'>" + res.data[i].resumeName + " </div>")
+                }
+
+            },
+            error:function(data){
+                console.log("false")
+                console.log(data)
+            }
+
+        });
+    })
+
+    function toudi(resumeId) {
+        var stuid = getCookie("stuid");
+        posiId=$("#gwid").text();
+        enId=$("#gsid").text();
+        $.ajax({
+            url: "http://127.0.0.1:8080/index/apply.do",
+            type: 'get',
+            async: false,
+            dataType: 'json',
+            data: {"stuid": stuid, "posiId": posiId,"enId":enId,"resumeId":resumeId},
+            success: function (res) {
+                alert("投递成功")
+            },
+            error: function (res) {
+                alert("投递失败")
+            }
+        })
+
+
+    }
+
+
+
+
+
+</script>
+</body>
+</html>
